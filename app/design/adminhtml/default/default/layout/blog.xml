@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <blog_adminhtml_article_index>
+        <reference name="content">
+            <block type="blog/adminhtml_article" name="article" />
+        </reference>
+    </blog_adminhtml_article_index>
+    <blog_adminhtml_article_edit>
+        <reference name="content">
+            <block type="blog/adminhtml_edit" name="article" />
+        </reference>
+    </blog_adminhtml_article_edit>
+    <blog_adminhtml_comment_index>
+        <reference name="content">
+            <block type="blog/adminhtml_comment" name="comment" />
+        </reference>
+    </blog_adminhtml_comment_index>
+</layout>

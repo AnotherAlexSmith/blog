@@ -1,0 +1,88 @@
+<script language="JavaScript">
+    function sendRating(comm_id,like)
+    {
+        new Ajax.Request('<?php echo Mage::getBaseUrl(). 'blog/comment/like' ?>',
+        {
+            method: 'post',
+            parameters: {comment_id: comm_id, rate: like},
+            onSuccess: function(transport)
+            {
+                var response = transport.responseText || "no response text";
+                updateRating(comm_id,response);
+                setCookie(comm_id);
+            },
+            onFailure: function() { alert('Something went wrong...');}
+        });
+    }
+
+    function updateRating(comm_id,rating)
+    {
+        $(comm_id+'-rating').innerHTML = rating;
+        $(comm_id+'-buttons').innerHTML = 'Rated!';
+
+    }
+
+    function setCookie(comm_id)
+    {
+        new Ajax.Request('<?php echo Mage::getBaseUrl(). 'blog/comment/setCookie' ?>',
+            {
+                method: 'post',
+                parameters: {comment_id: comm_id},
+                onSuccess: function(transport)
+                {
+                    var response = transport.responseText || "no response text";
+                    checkCookie(comm_id)
+                },
+                onFailure: function() { alert('Something went wrong...');}
+            });
+    }
+
+    function checkCookie(comm_id)
+    {
+        new Ajax.Request('<?php echo Mage::getBaseUrl(). 'blog/comment/checkCookie' ?>',
+            {
+                method: 'get',
+                parameters: {comment_id: comm_id},
+                onSuccess: function(transport)
+                {
+                    var response = transport.responseText || "no response text";
+//                    alert(comm_id);
+                    if(response == 1) $(comm_id+'-buttons').innerHTML = 'Rated!';
+                },
+                onFailure: function() { alert('Something went wrong...');}
+            });
+    }
+</script>
+<?php $collection = Mage::getModel('blog/comment')->getCollection();
+$itemid = $this->loaditemId();?>
+<div>
+    <h3>Comments:<br /></h3>
+    <hr />
+    <?php if($collection):?>
+        <?php foreach($collection as $comment):?>
+            <?php if($comment['article_id'] == $itemid and $comment['approved']):?>
+                <div onload="checkCookie()" class="comment" id="form-<?php echo $comment['comment_id'] ?>">
+                    <span style="font-weight: bold">Name:</span><br />
+                    <span>&nbsp;<?php echo $comment['user_name'];?></span><br />
+                    <span style="font-weight: bold">E-mail:</span><br />
+                    <span>&nbsp;<?php echo $comment['user_email'];?></span><br />
+                    <span style="font-weight: bold">Comment:</span><br />
+                    <span>&nbsp;<?php echo $comment['content'];?></span><br />
+                    <span style="font-weight: bold">Rating:</span><br />
+                    <span id="<?php echo $comment['comment_id']; ?>-rating">&nbsp;<?php
+                        if(!($comment['rating'])) echo "0";
+                        else echo $comment['rating'];?></span><br />
+                    <span style="font-weight: bold">Rate</span>
+                    <div id="<?php echo $comment['comment_id']; ?>-buttons">
+                        <button name="rated" onClick="sendRating('<?php echo $comment['comment_id']; ?>' , 'like')">Like!</button>
+                        <button name="rated" onClick="sendRating('<?php echo $comment['comment_id']; ?>' , 'dislike')">Dislike!</button>
+                    </div>
+                    <hr />
+                </div>
+                <script language="JavaScript">
+                    Event.observe('form-<?php echo $comment['comment_id'] ?>', 'load', checkCookie(<?php echo $comment['comment_id'] ?>));
+                </script>
+            <?php endif;?>
+        <?php endforeach;?>
+    <?php endif;?>
+</div>

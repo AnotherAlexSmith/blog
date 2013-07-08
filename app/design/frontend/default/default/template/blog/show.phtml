@@ -1,0 +1,8 @@
+<?php $item = $this->loaditem()?>
+<h1><?php echo 'Active Article: "'. $item->getData('title').'"';?></h1>
+<div style="text-align: right"><?php echo 'Created: '. $item->getData('created_date');?></div>
+<hr />
+<br />
+<div><?php echo $item->getData('content');?></div>
+<div><a href="<?php echo Mage::getBaseUrl(). 'blog'?>">Go back</a></div>
+<hr />

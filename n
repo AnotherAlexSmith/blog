@@ -1,0 +1,50 @@
+first commit
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	новый файл:   app/code/local/Snowcore/Blog/Block/Add.php
+#	новый файл:   app/code/local/Snowcore/Blog/Block/Adminhtml/Article.php
+#	новый файл:   app/code/local/Snowcore/Blog/Block/Adminhtml/Article/Grid.php
+#	новый файл:   app/code/local/Snowcore/Blog/Block/Adminhtml/Comment.php
+#	новый файл:   app/code/local/Snowcore/Blog/Block/Adminhtml/Comment/Grid.php
+#	новый файл:   app/code/local/Snowcore/Blog/Block/Adminhtml/Edit.php
+#	новый файл:   app/code/local/Snowcore/Blog/Block/Adminhtml/Edit/Form.php
+#	новый файл:   app/code/local/Snowcore/Blog/Block/Blog.php
+#	новый файл:   app/code/local/Snowcore/Blog/Block/Show.php
+#	новый файл:   app/code/local/Snowcore/Blog/Helper/Article.php
+#	новый файл:   app/code/local/Snowcore/Blog/Helper/Comment.php
+#	новый файл:   app/code/local/Snowcore/Blog/Helper/Data.php
+#	новый файл:   app/code/local/Snowcore/Blog/Model/Article.php
+#	новый файл:   app/code/local/Snowcore/Blog/Model/Comment.php
+#	новый файл:   app/code/local/Snowcore/Blog/Model/Mysql4/Article.php
+#	новый файл:   app/code/local/Snowcore/Blog/Model/Mysql4/Article/Collection.php
+#	новый файл:   app/code/local/Snowcore/Blog/Model/Mysql4/Comment.php
+#	новый файл:   app/code/local/Snowcore/Blog/Model/Mysql4/Comment/Collection.php
+#	новый файл:   app/code/local/Snowcore/Blog/controllers/Adminhtml/ArticleController.php
+#	новый файл:   app/code/local/Snowcore/Blog/controllers/Adminhtml/CommentController.php
+#	новый файл:   app/code/local/Snowcore/Blog/controllers/CommentController.php
+#	новый файл:   app/code/local/Snowcore/Blog/controllers/IndexController.php
+#	новый файл:   app/code/local/Snowcore/Blog/etc/adminhtml.xml
+#	новый файл:   app/code/local/Snowcore/Blog/etc/config.xml
+#	новый файл:   app/code/local/Snowcore/Blog/sql/blog_setup/mysql4-install-0.1.0.php
+#	новый файл:   app/code/local/Snowcore/Blog/sql/blog_setup/mysql4-upgrade-0.1.2-0.1.3.php
+#	новый файл:   app/code/local/Snowcore/Blog/sql/blog_setup/mysql4-upgrade-0.1.3-0.1.4.php
+#	новый файл:   app/code/local/Snowcore/Blog/sql/blog_setup/mysql4-upgrade-0.1.4-0.1.5.php
+#	новый файл:   app/code/local/Snowcore/Blog/sql/blog_setup/mysql4-upgrade-0.1.5-0.1.6.php
+#	новый файл:   app/design/adminhtml/default/default/layout/blog.xml
+#	новый файл:   app/design/frontend/default/default/layout/blog.xml
+#	новый файл:   app/design/frontend/default/default/template/blog/blog.phtml
+#	новый файл:   app/design/frontend/default/default/template/blog/comments_add.phtml
+#	новый файл:   app/design/frontend/default/default/template/blog/comments_show.phtml
+#	новый файл:   app/design/frontend/default/default/template/blog/show.phtml
+#	новый файл:   app/etc/modules/Snowcore_Blog.xml
+#	новый файл:   modman
+#	новый файл:   modman~
+#

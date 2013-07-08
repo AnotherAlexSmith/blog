@@ -1,0 +1,38 @@
+<h3>Add a comment:<br /></h3>
+<form id="add" action='<?php echo Mage::getBaseUrl(). 'blog/comment/submit/'?>' enctype='multipart/form-data' method='post' class='uniForm'>
+    <input type="hidden" value="<?php echo $this->loaditemId() ?>" name="article_id" >
+    <input type="hidden" value="<?php echo $this->getRequest()->getParam('slug') ?>" name="slug" >
+    <fieldset class='blockLabels'>
+        <legend>Добавление комментария</legend>
+    </fieldset>
+
+    <fieldset class='inlineLabels'>
+
+        <div class='ctrlHolder'>
+            <label><em>*</em> <strong>Имя</strong></label><br />
+            <input id="text-2" size='70' name='user_name' class="required-entry" type='text' value="">
+        </div>
+        <div class='ctrlHolder'>
+            <label><em>*</em> <strong>Адрес электронной почты</strong></label><br />
+            <input size='70' name='user_email' class="required-entry validate-email" type='text' value="">
+        </div>
+    </fieldset>
+
+    <fieldset class='blockLabels'>
+
+        <div class='ctrlHolder'>
+            <label><em>*</em> <strong>Комментарий</strong></label><br />
+            <textarea rows='10' cols='72' name='content' class='wide'></textarea>
+        </div>
+        <div class="buttonHolder">
+            <button type="submit" class="submitButton">Отправить</button>
+        </div>
+    </fieldset>
+</form>
+
+
+<script type="text/javascript">
+    //< ![CDATA[
+    var myForm= new VarienForm('add', false);
+    //]]>
+</script>

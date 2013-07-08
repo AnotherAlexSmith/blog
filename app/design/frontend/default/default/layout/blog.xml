@@ -1,0 +1,14 @@
+<layout version="0.1.0">
+    <blog_index_index>
+        <reference name="content">
+            <block type="blog/blog" name="blog_page" template="blog/blog.phtml" />
+        </reference>
+    </blog_index_index>
+    <blog_index_view>
+        <reference name="content">
+            <block type="blog/blog" name="blog_show" template="blog/show.phtml" />
+            <block type="blog/show" name="blog_comments_show" template="blog/comments_show.phtml" />
+            <block type="blog/add" name="blog_comments_add" template="blog/comments_add.phtml" />
+        </reference>
+    </blog_index_view>
+</layout>

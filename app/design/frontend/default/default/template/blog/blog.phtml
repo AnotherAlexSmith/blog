@@ -1,0 +1,8 @@
+<h1>Latest blog features:<br /></h1>
+<hr />
+<?php if($collection = $this->getCollection()):?>
+    <?php foreach($collection as $item):?>
+        <div><a href="<?php echo Mage::getBaseUrl(). 'blog/'. $item->getData('slug') ?>"><?php echo $item->getData('title');?></a></div>
+        <hr />
+    <?php endforeach;?>
+<?php endif;?>

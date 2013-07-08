@@ -1,0 +1,7 @@
+app/code/local/Snowcore/ app/code/local/Snowcore/
+app/design/frontend/default/default/layout/blog.xml app/design/frontend/default/default/layout/blog.xml
+app/design/frontend/default/default/template/blog/ app/design/frontend/default/default/template/blog/
+app/design/adminhtml/default/default/layout/blog.xml app/design/adminhtml/default/default/layout/blog.xml
+app/etc/modules/Snowcore_Blog.xml app/etc/modules/Snowcore_Blog.xml
+app/etc/modules/Snowcore_Blog.xml app/etc/modules/Snowcore_Blog.xml
+
